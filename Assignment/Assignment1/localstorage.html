@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1</title>
+    <script src="localstorage.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Assignment/Assignment1/localstorage.css">
+</head>
+<body>
+    <div class="container text" align="center">
+        <h3 class="text-">Local Storage</h3>
+    <form class="form-group" >
+        <h5>Product Id    :</h5><input type="text" id="id"><br><br>
+        <h5>Product Nmme  :</h5><input type="text" id="name"><br>
+        <h5>Product Price :</h5><input type="text" id="price"><br>
+        <h5>Product Description :</h5><textarea rows="4" cols="20" id="descriptin"></textarea>><br><br>
+        <button class="btn btn-outline-success" type="button" onclick="Sub()">Submit</button>
+        <button type="reset" class="btn btn-outline-primary ">Reset</button>
+        <button type="button" class="btn btn-outline-warning" onclick="clr()">Clear All</button>
+    </form>
+    <table class="table">
+        <thead>
+            <td>  Product ID  </td>
+            <td>  Product Name  </td>
+            <td>  Product Price  </td>
+            <td>  Product Description  </td>
+            <td></td>
+        </thead>
+        <tbody id="Show_table">
+
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

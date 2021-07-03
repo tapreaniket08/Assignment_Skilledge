@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Future value Calculator</title>
+    <style> 
+        .feild{ width:fit-content;
+               height:fit-content;
+               border-color: blue;
+               text-align: center;
+               font-size: 20px;
+               margin-top: 10%;
+               margin-left: 35%;
+             }
+          .btn{
+              width: 30%;
+          }   
+       
+    </style>
+
+
+  <script>
+       function disp()
+        {
+           var PV=Number(document.getElementById('ivnamo').value);
+           //console.log(PV)
+           var i=Number(document.getElementById('rate').value);
+           //console.log(i)
+           var n= Number(document.getElementById("Year").value)
+           //console.log(n)
+           var r=parseInt(Calculate(PV,i,n))
+           //console.log(r);
+           document.getElementById("result").value=r;           
+       }
+
+       function Calculate(PV,i,n){
+          //FV = PV * (1 + i / 100)n
+            var x=(1+i/100)
+            var FV=PV*(Math.pow(x,n))
+            return FV;
+        }
+   </script>  
+ </head>
+
+<body >
+    <fieldset class="feild">
+        <legend style="font-size:30px;"> Future value</legend>
+        <div>
+        <h5>Amount          : <input type="text" id="ivnamo"></h5>
+        <h5>Interest Rate   :  <input type="text" id="rate"></h5>
+        <h5>Number Of Years : <input type="text" id="Year"></h5>
+        <h5>Future value    : <input type="text" id="result"></h5>
+        <br>
+        <button class=" btn" type="button" onclick="disp ()">Result</button>
+        </div>
+    </fieldset>
+
+</body>
+
+</html>
